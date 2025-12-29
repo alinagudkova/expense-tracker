@@ -1,0 +1,9 @@
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/ExpenseApplication.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/controller/AuthController.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/controller/ExpenseController.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/model/Expense.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/model/User.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/repository/ExpenseRepository.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/repository/UserRepository.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/service/ExpenseService.java
+/Users/alinagudkova/Downloads/Архив 2/expense-backend/expense/src/main/java/com/example/expense/service/UserService.java
