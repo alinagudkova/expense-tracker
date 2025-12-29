@@ -1,5 +1,113 @@
-# Vue 3 + Vite
+Документация проекта Expense Tracker
+1. Общая информация
+Expense Tracker — это веб‑приложение для учёта личных расходов. Проект разработан в рамках учебной дисциплины «Современное программирование» и реализован по архитектуре frontend + backend.
+Приложение позволяет:
+	•	добавлять расходы;
+	•	просматривать список расходов;
+	•	группировать расходы по категориям;
+	•	анализировать траты.
+Проект разделён на два независимых модуля:
+	•	Frontend — Vue + Vite
+	•	Backend — Spring Boot (REST API)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+2. Архитектура проекта
+2.1 Общая схема
+[ Frontend (Vue) ]  --->  [ Backend (Spring Boot) ]  --->  [ Database ]
+Frontend отвечает за пользовательский интерфейс и взаимодействие с пользователем. Backend предоставляет REST API для хранения и обработки данных.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+3. Frontend
+3.1 Используемые технологии
+	•	Node.js
+	•	Vite
+	•	Vue 3
+	•	@vue/test-utils
+3.2 Структура frontend-проекта
+expense-frontend/
+├── src/
+│   ├── components/        # Vue‑компоненты
+│   │   ├── ExpensesList.vue
+│   │   └── HelloWorld.vue
+│   ├── tests/             # Unit‑тесты
+│   │   ├── App.test.js
+│   │   └── ExpensesList.test.js
+│   ├── App.vue            # Корневой компонент
+│   └── main.js            # Точка входа
+├── package.json
+└── vite.config.js
+3.3 Назначение основных компонентов
+	•	App.vue — корневой компонент приложения.
+	•	ExpensesList.vue — отображение списка расходов.
+	•	HelloWorld.vue — демонстрационный компонент.
+
+4. Backend
+4.1 Используемые технологии
+	•	Java 17+
+	•	Spring Boot
+	•	Spring Web
+	•	Spring Data JPA
+	•	H2 / Hibernate
+	•	JUnit 5
+4.2 Основные функции backend
+	•	предоставление REST API для расходов;
+	•	управление категориями;
+	•	хранение данных;
+	•	обработка бизнес‑логики.
+
+5. Запуск проекта
+5.1 Запуск frontend
+npm install
+npm run dev
+Frontend будет доступен по адресу:
+http://localhost:5173
+5.2 Запуск backend
+./mvnw spring-boot:run
+Backend будет доступен по адресу:
+http://localhost:8080
+
+6. Тестирование
+6.1 Frontend‑тестирование
+Для frontend используется Vitest и @vue/test-utils.
+Запуск тестов
+npm run test
+Покрытие кода
+npm run test -- --coverage
+Тесты покрывают:
+	•	рендер компонентов;
+	•	корректное отображение данных;
+	•	поведение при пустом списке расходов;
+	•	работу асинхронных операций (fetch).
+Покрытие кода frontend:
+	•	Statements: ~80%
+	•	Lines: ~80%
+
+6.2 Backend‑тестирование
+Backend‑тестирование реализовано с помощью JUnit 5 и Spring Boot Test.
+Тестируются:
+	•	REST‑контроллеры;
+	•	сервисы;
+	•	репозитории.
+Запуск тестов backend
+./mvnw test
+Подсчёт покрытия
+Для анализа покрытия используется JaCoCo.
+Минимальное покрытие:
+	•	не ниже 90%.
+
+7. Подход к тестированию
+В проекте используются следующие виды тестов:
+	•	Unit‑тесты — проверка отдельных компонентов и сервисов;
+	•	Component‑тесты — проверка Vue‑компонентов;
+	•	Mock‑объекты — для изоляции тестируемой логики от внешних зависимостей.
+Тесты написаны таким образом, чтобы:
+	•	быть независимыми;
+	•	быть воспроизводимыми;
+	•	проверять поведение, а не реализацию.
+
+8. Развитие проекта
+Возможные направления развития:
+	•	хеширование паролей;
+	•	расширение аналитики расходов;
+	•	интеграция графиков и диаграмм;
+
+9. Заключение
+Проект Expense Tracker демонстрирует применение современных технологий frontend и backend‑разработки, а также практику написания осмысленных тестов с высоким покрытием кода. Архитектура проекта позволяет легко расширять функциональность и поддерживать кодовую базу.
